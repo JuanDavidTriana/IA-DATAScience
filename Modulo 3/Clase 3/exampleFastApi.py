@@ -2,7 +2,7 @@
 
 # --- Importaciones Necesarias ---
 import uvicorn
-import joblib 
+import joblib
 import numpy as np
 from fastapi import FastAPI
 from pydantic import BaseModel
@@ -18,6 +18,7 @@ try:
     modelo = joblib.load('clasificador_iris_pipeline.joblib')
     nombres_especies = ['setosa', 'versicolor', 'virginica']
     print("Modelo cargado exitosamente.")
+    
 except FileNotFoundError:
     print("Error: Archivo 'clasificador_iris_pipeline.joblib' no encontrado.")
     modelo = None
