@@ -1,0 +1,30 @@
+@import "tailwindcss";
+
+#root {
+
+    
+}
+
+body {
+  margin: 0;
+  padding: 0;
+  transition: background-color 0.3s, color 0.3s;
+}
+
+.app {
+  min-height: 100vh;
+  width: 100%;
+}
+
+/* Light theme (default) */
+body.light-theme {
+  background-color: #f5f6fa;
+  color: #2c3e50;
+}
+
+/* Dark theme */
+body.dark-theme {
+  background-color: #1a1a1a;
+  color: #ffffff;
+}
+
