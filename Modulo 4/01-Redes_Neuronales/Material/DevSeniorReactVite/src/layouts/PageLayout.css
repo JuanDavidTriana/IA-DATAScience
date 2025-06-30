@@ -1,0 +1,147 @@
+.page {
+  display: flex;
+  min-height: 100vh;
+  width: 100%;
+  background: var(--bg-primary);
+  transition: background 0.3s;
+  overflow: hidden;
+}
+
+.main-content {
+  flex-grow: 1;
+  padding: 0 48px 48px 48px;
+  overflow-y: auto;
+  margin-left: 220px; /* Ancho del Slidebar */
+}
+
+.content-wrapper {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding-top: 48px;
+}
+
+.header {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  margin-bottom: 40px;
+  border-bottom: 1.5px solid var(--border-color, #e5e7eb);
+  padding-bottom: 24px;
+}
+
+.header h1 {
+  font-size: 32px;
+  font-weight: 800;
+  margin: 0;
+  color: var(--text-primary);
+  line-height: 1.2;
+}
+
+.header .subtitle {
+  font-size: 18px;
+  color: var(--text-secondary);
+  margin: 4px 0 0 0;
+}
+
+.theme-toggle {
+  background: var(--bg-secondary);
+  color: var(--text-primary);
+  border: 1.5px solid var(--border-color, #e5e7eb);
+  border-radius: 50%;
+  width: 48px;
+  height: 48px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  font-size: 24px;
+  transition: all 0.2s;
+  flex-shrink: 0;
+}
+
+.theme-toggle:hover {
+  transform: scale(1.1) rotate(15deg);
+  box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+}
+
+.section {
+  background: var(--bg-secondary);
+  padding: 24px 32px;
+  border-radius: 12px;
+  margin-bottom: 32px;
+  border: 1px solid var(--border-color, #e5e7eb);
+}
+
+.section h2 {
+  font-size: 24px;
+  font-weight: 700;
+  color: var(--text-primary);
+  margin: 0 0 24px 0;
+  border-bottom: 1px solid var(--border-color, #e5e7eb);
+  padding-bottom: 12px;
+}
+
+.section ul {
+  list-style: none;
+  padding-left: 0;
+  margin: 0;
+}
+
+.section li {
+  position: relative;
+  padding-left: 28px;
+  margin-bottom: 12px;
+  font-size: 16px;
+  color: var(--text-secondary);
+}
+
+.section li::before {
+  content: '✓';
+  position: absolute;
+  left: 0;
+  top: 0;
+  color: #2ecc71; /* Green checkmark */
+  font-weight: bold;
+}
+
+.objectives-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 24px;
+}
+
+.objective-card, .dataset-card {
+  background: var(--bg-primary);
+  border: 1px solid var(--border-color, #e5e7eb);
+  padding: 20px;
+  border-radius: 8px;
+  transition: transform 0.2s, box-shadow 0.2s;
+}
+
+.objective-card:hover, .dataset-card:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 8px 16px rgba(0,0,0,0.07);
+}
+
+.objective-card h3, .dataset-card h3 {
+  font-size: 18px;
+  margin: 0 0 10px 0;
+  color: var(--text-primary);
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.dataset-card h3 a {
+    color: inherit;
+    text-decoration: none;
+    transition: color 0.2s;
+}
+
+.dataset-card h3 a:hover {
+    color: #a259f7; /* Highlight color */
+}
+
+.dataset-card p {
+    margin-bottom: 8px;
+} 
